@@ -107,8 +107,16 @@ This lock screen shows a colorful, emoji‑styled interface and keeps looping un
 
 🛠️ Easy to customize
 
+
+💖 Support
+
+If you like this repository, please ⭐ star it!
+Feel free to contribute or open issues for help.
+
 [![YouTube](https://img.shields.io/badge/YouTube-🔥TermuxMastery🔥-ff0000?style=for-the-badge&logo=youtube&logoColor=ffffff)](https://youtube.com/@termuxmastery?si=U8LvcGiAJZES7YHE)
 
+📫 Contact
 
+Email: gullkhan@example.com
 
 
