@@ -24,7 +24,7 @@ Does not upgrade packages yet.
 ```
 pkg update && pkg upgrade
 ```
-### 📂 Termux Bash Configuration (~/.bashrc)
+### 📂 Termux Bash Configuration
 
 This repository demonstrates how to customize your Termux terminal using the ~/.bashrc file. Opened with the Nano text editor, this file allows you to personalize your environment with:
 
@@ -38,3 +38,72 @@ This repository demonstrates how to customize your Termux terminal using the ~/.
 ```
 nano ~/.bashrc
 ```
+```
+#!/bin/bash
+# Termux Lock Screen 🔐
+# Password: 123456
+
+# --------------------------
+# Colors for styling
+# --------------------------
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+CYAN="\e[36m"
+MAGENTA="\e[35m"
+RESET="\e[0m"
+
+# --------------------------
+# Header function
+# --------------------------
+header() {
+    clear
+    echo -e "${MAGENTA}╔══════════════════════════════╗${RESET}"
+    echo -e "${CYAN}       🔐 Termux Lock Screen 🔐      ${RESET}"
+    echo -e "${MAGENTA}╚══════════════════════════════╝${RESET}"
+    echo ""
+}
+
+# --------------------------
+# Lock screen function
+# --------------------------
+lock_screen() {
+    header
+    read -sp "Enter Password 🔑: " password
+    echo ""
+    if [ "$password" == "123456" ]; then
+        echo -e "${GREEN}Access Granted ✅${RESET}"
+        sleep 1
+        clear
+    else
+        echo -e "${RED}Access Denied ❌ Try Again!${RESET}"
+        sleep 1
+        lock_screen
+    fi
+}
+
+# --------------------------
+# Start lock screen
+# --------------------------
+lock_screen
+```
+🔐 Termux Lock Screen (Password Protected)
+
+A beautiful and lightweight Termux lock screen script written in Bash, designed to protect your Termux environment with a password.
+
+This lock screen shows a colorful, emoji‑styled interface and keeps looping until the correct password is entered.
+
+✨ Features
+
+🔑 Password protection (default: 123456)
+
+🎨 Colorful & clean terminal UI
+
+😊 Emoji‑based design
+
+🔄 Retry until correct password
+
+⚡ Lightweight & fast
+
+🛠️ Easy to customize
+
